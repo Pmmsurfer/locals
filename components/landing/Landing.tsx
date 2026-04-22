@@ -1,4 +1,4 @@
-import { WaitlistForm } from "./WaitlistForm";
+import Link from "next/link";
 
 const activityCards = [
   {
@@ -74,12 +74,20 @@ export function Landing() {
           <span className="font-sans text-[22px] font-extrabold text-accent">
             LOCALS
           </span>
-          <a
-            href="#waitlist"
-            className="inline-flex items-center justify-center rounded-button bg-accent px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
-          >
-            Join waitlist
-          </a>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/login"
+              className="inline-flex items-center justify-center rounded-button border border-[#DDDDD8] bg-white px-5 py-2 text-sm font-bold text-[#1A1A18] transition hover:opacity-90"
+            >
+              Log in
+            </Link>
+            <Link
+              href="/signup"
+              className="inline-flex items-center justify-center rounded-button bg-[#1B3FF0] px-5 py-2 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Sign up
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -96,21 +104,21 @@ export function Landing() {
             Find people near you who show up.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
-            <a
-              href="#waitlist"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-button bg-accent px-6 py-3 text-center text-sm font-bold text-white transition hover:opacity-90"
+            <Link
+              href="/signup"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-button bg-[#1B3FF0] px-7 py-[14px] text-center text-base font-bold text-white transition hover:opacity-90"
             >
-              Join the waitlist
-            </a>
-            <a
-              href="#how"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-button border border-foreground bg-surface px-6 py-3 text-center text-sm font-bold text-foreground transition hover:bg-background"
+              Get started free
+            </Link>
+            <Link
+              href="/login"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-button border border-[#1A1A18] bg-white px-7 py-[14px] text-center text-base font-bold text-[#1A1A18] transition hover:bg-background"
             >
-              See how it works
-            </a>
+              Sign in
+            </Link>
           </div>
           <p className="mt-6 text-[13px] text-muted">
-            Free · Launching this summer
+            Free to join · LA launching now
           </p>
         </section>
 
@@ -158,22 +166,22 @@ export function Landing() {
         </p>
       </section>
 
-      <div className="mx-auto max-w-[900px] px-6 py-20">
-        <section
-          id="waitlist"
-          className="mx-auto max-w-[520px] scroll-mt-24 rounded-2xl border border-card-border bg-surface p-10"
-        >
-          <h2 className="text-center font-sans text-[32px] font-extrabold leading-tight text-foreground">
-            Be a founding Local
-          </h2>
-          <p className="mt-2 text-center text-sm text-muted">
-            Early access · Your city first
-          </p>
-          <div className="mt-8">
-            <WaitlistForm />
-          </div>
-        </section>
-      </div>
+      <section className="w-full py-20 px-8 text-center">
+        <h2 className="font-sans text-[36px] font-extrabold text-foreground">
+          Ready to find your crew?
+        </h2>
+        <p className="mt-2 text-base text-[#888880]">
+          Join free and find your first session today.
+        </p>
+        <div className="mt-6">
+          <Link
+            href="/signup"
+            className="inline-flex items-center justify-center rounded-button bg-[#1B3FF0] px-8 py-[14px] text-base font-bold text-white transition hover:opacity-90"
+          >
+            Get started free
+          </Link>
+        </div>
+      </section>
 
       <footer className="border-t border-border bg-background">
         <div className="mx-auto flex max-w-[900px] flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">

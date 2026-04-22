@@ -41,7 +41,13 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4 text-foreground">
+    <div className="relative flex min-h-screen items-center justify-center bg-background px-4 text-foreground">
+      <Link
+        href="/"
+        className="absolute left-4 top-4 text-[13px] text-[#888880] transition hover:opacity-80"
+      >
+        ← Back
+      </Link>
       <div className="w-full max-w-md space-y-8 rounded-card border border-card-border bg-surface p-8 shadow-lg">
         <div className="space-y-1 text-center">
           <h1 className="font-sans text-4xl font-extrabold tracking-wide text-accent">
